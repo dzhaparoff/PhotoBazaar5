@@ -1,0 +1,15 @@
+<%
+  bpod = best_photo_of_the_day
+%>
+<style>
+  .fullscreen-loading {
+    background-image: url(<%= "http://photobazaar.ru/#{bpod.thumbnails.url(:compressed)}" %>);
+  }
+</style>
+<div class="container-fluid fullscreen-loading">
+  <div class="row">
+    <div class="col-sm-12">
+      Загрузка
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="ts-external-references" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/frontend/typings/browser/ambient/jasmine/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/frontend/typings/browser/ambient/es6-shim/index.d.ts" />
+        <item url="file://$PROJECT_DIR$/frontend/typings/browser.d.ts" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/frontend/typings/browser/ambient/jasmine/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/frontend/typings/browser/ambient/es6-shim/index.d.ts" />
+      <root url="file://$PROJECT_DIR$/frontend/typings/browser.d.ts" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

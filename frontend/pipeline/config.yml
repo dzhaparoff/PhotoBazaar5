@@ -1,0 +1,30 @@
+root:
+  src: ../frontend/src
+  dest: ../public/assets
+compitability:
+  - "last 2 versions"
+  - "ie >= 9"
+tasks:
+  images:
+    src:  images/**/*
+    dest: images
+  fonts:
+    src:  fonts/**/*
+    dest: fonts
+  stylesheets:
+    src:  stylesheets/manifest.scss
+    dest: stylesheets
+    file: application.css
+#    include:
+#      - "../frontend/bower_components/foundation-sites/scss"
+#      - "../frontend/bower_components/motion-ui/src"
+  javascripts:
+    src:  app/bundle.js
+    dest: app
+    file: application.js
+    modules:
+      - "../../node_modules"
+  typescripts:
+    src:    app
+    dest:   app
+    config: ../frontend/tsconfig.json

@@ -1,0 +1,44 @@
+<%
+bpod = best_photo_of_the_day
+%>
+<style>
+  .bg-image {
+    background-image: url(<%= "http://photobazaar.ru/#{bpod.thumbnails.url(:compressed)}" %>);
+  }
+</style>
+<header animated-ff-bg class="site-header">
+  <div class="logo-box">
+    <svg animated-logo version="1.2" baseProfile="tiny" id="LogoSvg"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="118px" height="85px"
+         xml:space="preserve" viewbox="0 0 120 85">
+      <path d="M10.709,17.361h96.502c1.631,0,2.954,1.323,2.954,2.954v61.052c0,1.632-1.323,2.954-2.954,2.954H10.709c-1.632,0-2.954-1.323-2.954-2.954V20.315C7.755,18.683,9.077,17.361,10.709,17.361z"/>
+      <path d="M45.174,17.361l9.847-16.74h27.572l9.847,16.74"/>
+      <path d="M68.315,22.284c15.5,0,28.064,12.565,28.064,28.064S83.814,78.413,68.315,78.413S40.25,65.848,40.25,50.349S52.815,22.284,68.315,22.284z"/>
+      <path d="M68.315,31.147c10.605,0,19.202,8.597,19.202,19.202c0,10.605-8.597,19.202-19.202,19.202c-10.605,0-19.202-8.597-19.202-19.202C49.113,39.744,57.71,31.147,68.315,31.147z"/>
+      <path d="M30.403,17.361v66.961"/>
+      <path d="M30.403,39.025h12.228"/>
+      <path d="M93.997,39.025h16.168"/>
+      <path d="M99.333,23.269c2.719,0,4.924,2.204,4.924,4.924s-2.204,4.924-4.924,4.924s-4.924-2.204-4.924-4.924S96.614,23.269,99.333,23.269z"/>
+      <path d="M110.165,30.162h4.924c1.088,0,1.969,0.882,1.969,1.969v9.847c0,1.088-0.882,1.969-1.969,1.969h-4.924"/>
+      <path d="M7.755,43.948H2.831c-1.088,0-1.969-0.882-1.969-1.969v-9.847c0-1.088,0.882-1.969,1.969-1.969h4.924"/>
+      <path d="M17.602,17.361v-5.908h18.71v5.908"/>
+    </svg>
+    <div class="title">PhotoBazaar<span>beta</span></div>
+    <div class="description">
+      Лучшие фотографии со всего мира каждый день
+      <div class="ui hidden divider"></div>
+      <a class="svg-wrapper" href="/fresh">
+        <svg height="50" width="280" xmlns="http://www.w3.org/2000/svg" viewPort="0 0 50 280">
+          <rect x="0" y="0" class="shape" height="50" width="280" />
+        </svg>
+        <span class="text">смотреть все</span>
+      </a>
+    </div>
+  </div>
+  <div class="site-header-name">
+    <a href="/photo/<%=bpod.id %>/from_bpod">Фотография дня #<%= bpod.best_photo_of_the_day.number %></a>
+    <div class="copyright-row">© by <%= bpod.photographer.fullname.titleize %> (<%= bpod.photographer.country %><%= prepend_whitespace bpod.photographer.city %>)</div>
+  </div>
+  <div class="cloak"></div>
+  <div class="bg-image"></div>
+</header>
